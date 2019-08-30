@@ -10,10 +10,16 @@
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+<!--        <item name="android:background">@drawable/main_new_background</item>-->
     </style>
     <style name="textViewMain">
         <item name="android:textColor">@color/colorMainText</item>
 
     </style>
+
 
 </resources>

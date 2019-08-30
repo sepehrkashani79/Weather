@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@drawable/weather_recycler_item_shape"
+    android:layout_width="100dp"
+    android:gravity="center"
+    android:layout_margin="5dp"
+    android:layout_height="100dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/textViewMain"
+        android:text="Sat"
+        android:textSize="25dp"
+        android:id="@+id/txtDay"
+        />
+<!--    <ImageView-->
+<!--        android:layout_width="60dp"-->
+<!--        android:layout_height="60dp"-->
+<!--        android:src="@drawable/cloudy"-->
+<!--        android:scaleType="fitXY"-->
+<!--        android:id="@+id/imgCondition"-->
+<!--        />-->
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        style="@style/textViewMain"-->
+<!--        android:text="Cloudy"-->
+<!--        android:id="@+id/txtCondition"-->
+
+<!--        />-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="44°"
+        android:textSize="20dp"
+        android:id="@+id/txtHighTemp"
+        android:textColor="#D83232"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="37°"
+        android:textSize="20dp"
+        android:id="@+id/txtLowTemp"
+        android:textColor="#0090FF"/>
+</LinearLayout>

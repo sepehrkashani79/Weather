@@ -8,4 +8,5 @@
     <color name="colorNotificationBAr">#2C3744</color>
     <color name="colorBackground">#3C495A</color>
     <color name="colorMainText">#FFFFFF</color>
+    <color name="weather_recycler_item_stroke">#B6AFAF</color>
 </resources>
