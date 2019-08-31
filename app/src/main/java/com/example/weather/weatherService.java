@@ -80,7 +80,7 @@ public class weatherService {
                     Log.d("mytag", "something went wrong in json system");
                     System.out.println("something went wrong in json system");
                 }
-                parent.finito();
+                parent.finishLoad();
             }
 
             @Override

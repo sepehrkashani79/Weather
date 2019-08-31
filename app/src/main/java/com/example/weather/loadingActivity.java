@@ -16,9 +16,9 @@ public class loadingActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_loading);
-        ImageView gif=findViewById(R.id.loadGif);
-//        Picasso.get().load(R.drawable.loader_xxxix).into(gif);
-        Glide.with(loadingActivity.this).load(R.drawable.loader_xxxix).into(gif);
+//        ImageView gif=findViewById(R.id.loadGif);
+////        Picasso.get().load(R.drawable.loader_xxxix).into(gif);
+//        Glide.with(loadingActivity.this).load(R.drawable.loader_xxxix).into(gif);
 
         finishLoading =new Intent(loadingActivity.this,MainActivity.class);
 //        w.LoadActivity=getApplicationContext();
@@ -33,8 +33,7 @@ public class loadingActivity extends AppCompatActivity {
 //        })
 
     }
-    public void finito(){
-        System.out.println("FINITOOODODODOODODOODO----------------------");
+    public void finishLoad(){
         startActivity(finishLoading);
     }
 

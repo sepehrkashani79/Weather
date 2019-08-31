@@ -39,13 +39,15 @@ public class cityDB extends SQLiteOpenHelper {
         Log.d("sql",cityName+" added to the database");
     }
     public ArrayList<String> getAllcities() {
-
-        SQLiteDatabase db = this.getReadableDatabase();
-        Cursor cursor = db.rawQuery("SELECT city from " + tableName, null);
-        while (cursor.moveToNext()) {
-            List.add(cursor.getString(0));
+        if(List.size()==0){
+            SQLiteDatabase db = this.getReadableDatabase();
+            Cursor cursor = db.rawQuery("SELECT city from " + tableName, null);
+            while (cursor.moveToNext()) {
+                List.add(cursor.getString(0));
+            }
+            db.close();
         }
-        db.close();
+
         return List;
     }
     public void deleteCity(String cityName){

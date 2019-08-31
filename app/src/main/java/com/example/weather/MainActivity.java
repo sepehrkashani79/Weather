@@ -84,23 +84,29 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 boolean haveSame=false;
                 for(int i=0;i<cityAdapter.cityList.size();i++){
-                    if(cityAdapter.cityList.get(i).compareToIgnoreCase(edtNewCity.getText().toString())==0)
+                    if(cityAdapter.cityList.get(i).compareToIgnoreCase(edtNewCity.getText().toString())==0){
+                        String t;
                         haveSame=true;
+                        t=db.List.get(i);
+                        db.List.remove(i);
+                        db.deleteCity(t);
+//                        db.List.add(t);
+                        break;
+                    }
                 }
-                if(haveSame==false){
-                    db.insert(edtNewCity.getText().toString());
-                    cityAdapter.cityList.add(edtNewCity.getText().toString());
-                    city=edtNewCity.getText().toString();
-                    txtLocation.setText(city);
-                    //cityRecycler.setAdapter(cityAdapter);
-//                    cityAdapter.fullRefresh();
-                    cityAdapter.notifyDataSetChanged();
-                    loadingActivity.w.getWheather();
-                    dailyAdapter.notifyDataSetChanged();
-                    hourlyAdapter.notifyDataSetChanged();
+
+                db.insert(edtNewCity.getText().toString());
+                cityAdapter.cityList.add(edtNewCity.getText().toString());
+                cityAdapter.notifyDataSetChanged();
 
 
-                }
+                city=edtNewCity.getText().toString();
+//                txtLocation.setText(city);
+                loadingActivity.w.getWheather();
+                dailyAdapter.notifyDataSetChanged();
+                hourlyAdapter.notifyDataSetChanged();
+                txtLocation.setText(city);
+//                txtLocation.setText(city);
 
             }
         });
