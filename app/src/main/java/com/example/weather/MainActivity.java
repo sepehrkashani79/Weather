@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.view.View;
@@ -76,7 +77,14 @@ public class MainActivity extends AppCompatActivity {
         cityRecycler.setLayoutManager(new LinearLayoutManager(MainActivity.this,RecyclerView.VERTICAL,false));
         final cityDB db=new cityDB(MainActivity.this);
         final cityRecyclerAdapter cityAdapter=new cityRecyclerAdapter(db.getAllcities(),db);
-        txtLocation.setText(db.List.get(db.List.size()-1));
+        if(db.List.size()!=0){
+            txtLocation.setText(db.List.get(db.List.size()-1));
+        }
+        else{
+            txtLocation.setText("Tehran");
+            db.insert("Tehran");
+        }
+
         city=txtLocation.getText().toString();
         cityRecycler.setAdapter(cityAdapter);
         btnAddCity.setOnClickListener(new View.OnClickListener() {
@@ -110,7 +118,14 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-
+        final Intent about=new Intent(MainActivity.this,AboutApp.class);
+        Button btnAbout=findViewById(R.id.btnAboutApp);
+        btnAbout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(about);
+            }
+        });
 
 
     }
