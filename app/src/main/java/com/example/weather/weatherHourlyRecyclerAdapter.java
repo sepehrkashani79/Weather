@@ -22,7 +22,7 @@ import java.util.concurrent.TimeoutException;
 public class weatherHourlyRecyclerAdapter  extends RecyclerView.Adapter<weatherHourlyRecyclerAdapter.hourlyWheatherHolder> {
     ArrayList<hourlyWeather> list=new ArrayList<>();
 
-    Map<String,Integer> map=new HashMap<>();
+    public static Map<String,Integer> map=new HashMap<>();
 
     public weatherHourlyRecyclerAdapter() {
         map.put("01d",R.drawable.a01d);

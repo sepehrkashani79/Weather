@@ -17,7 +17,8 @@
     <ImageView
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:src="@drawable/cloudy"
+        android:src="@drawable/a01d"
+        android:padding="10dp"
         android:scaleType="fitXY"
         android:id="@+id/imgHourlyCondition"
         />
