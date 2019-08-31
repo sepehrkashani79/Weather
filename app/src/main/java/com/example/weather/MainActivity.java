@@ -92,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 boolean haveSame=false;
                 for(int i=0;i<cityAdapter.cityList.size();i++){
-                    if(cityAdapter.cityList.get(i).compareToIgnoreCase(edtNewCity.getText().toString())==0){
+                    if(cityAdapter.cityList.get(i).toLowerCase().compareTo(edtNewCity.getText().toString().toLowerCase())==0){
                         String t;
                         haveSame=true;
                         t=db.List.get(i);
